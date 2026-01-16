@@ -1,0 +1,15 @@
+dependencies:
+- name: cloudnative-pg
+  repository: https://cloudnative-pg.io/charts/
+  version: 0.27.0
+- name: traefik
+  repository: https://traefik.github.io/charts
+  version: 38.0.2
+- name: cert-manager
+  repository: https://charts.jetstack.io
+  version: v1.19.2
+- name: argo-cd
+  repository: oci://ghcr.io/argoproj/argo-helm
+  version: 9.3.4
+digest: sha256:5793529cc0f3d10b7393f00664440dc53d44ae8934d650f0b4953b484bcc693f
+generated: "2026-01-15T16:44:49.193675+01:00"

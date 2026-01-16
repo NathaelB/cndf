@@ -1,0 +1,20 @@
+apiVersion: postgresql.cncf.io/v1
+kind: Cluster
+metadata:
+  name: ferriskey-postgres
+  namespace: ferriskey
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+spec:
+  instances: 3
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "250m"
+    limits:
+      memory: "512Mi"
+      cpu: "500m"
+  affinity:
+    enablePodAntiAffinity: true
+    topologyKey: "kubernetes.io/hostname"
+    podAntiAffinityType: "preferred"

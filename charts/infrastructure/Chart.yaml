@@ -1,0 +1,22 @@
+apiVersion: v2
+name: infrastructure
+description: A Helm chart for Kubernetes
+
+type: application
+version: 0.1.0
+
+appVersion: "1.16.0"
+
+dependencies:
+  - name: cloudnative-pg
+    repository: https://cloudnative-pg.io/charts/
+    version: "0.27.0"
+  - name: traefik
+    version: 38.0.2
+    repository: https://traefik.github.io/charts
+  - name: cert-manager
+    version: 1.19.2
+    repository: https://charts.jetstack.io
+  - name: argo-cd
+    version: 9.3.4
+    repository: oci://ghcr.io/argoproj/argo-helm
